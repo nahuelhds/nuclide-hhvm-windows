@@ -48,15 +48,15 @@ docker run -d -p 9090:9090 -p 9091:22 -v D:/wamp64/www:/projects/backend -v D:/d
 ### Nuclide remote connection
 Once you have the image running in Docker, go to your local machine and:
 
-1. Open Atom + Nuclide.
-1. In the Tree view, click on the **Add Remote Project Folder**.
-1. Introduce the following settings:
-  - **Username** - `root`
-  - **Server** - `localhost` or `127.0.0.1`
-  - **Initial Directory** - `/projects/<your-project-folder>`
-  - **SSH Port** - `9091`
-  - **Password** - `nuclide`
-  - **Remote Server Command** - `nuclide-start-server --port 9090`
+* Open Atom + Nuclide.
+* In the Tree view, click on the **Add Remote Project Folder**.
+* Introduce the following settings:
+  * **Username** - `root`
+  * **Server** - `localhost` or `127.0.0.1`
+  * **Initial Directory** - `/projects/<your-project-folder>`
+  * **SSH Port** - `9091`
+  * **Password** - `nuclide`
+  * **Remote Server Command** - `nuclide-start-server --port 9090`
 
 ## Handling the container
 Some useful Docker commands:
