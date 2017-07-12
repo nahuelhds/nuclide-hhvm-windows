@@ -10,7 +10,9 @@ The goal of this project is to **code Hack in Windows** with Nuclide and be able
 > This repo is strongly based on the work done by **joseajp** in his [nuclide-remote repo](https://github.com/joseajp/nuclide-remote).
 
 ## TL;DR
-HHVM doesn't work on Windows yet and my goal was to be able to work with Nuclide and the HHVM Client (hh_client) in order to be able to lint my Hack code. So, making use of the Remote Project functionality and a Docker Image with Nuclide Remote and HHVM I could make it work.
+HHVM *doesn't work natively on Windows yet* and my goal was to be able to work with Nuclide and the HHVM Client (hh_client) in order to be able to lint my Hack code.
+
+So, making use of the Remote Project functionality and this Docker image with Nuclide Remote and HHVM **you can make it work**.
 
 ## Usage
 
