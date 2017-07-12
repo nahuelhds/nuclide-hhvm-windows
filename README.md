@@ -1,5 +1,3 @@
-[![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/joseajp/nuclide-remote/)
-
 # nuclide-hhvm-windows
 Remote Nuclide Server & HHVM in a Docker container for Windows usage with Nuclide Remote Project Folder functionality. You can obtain more information about Nuclide at https://nuclide.io/docs/features/remote/
 
