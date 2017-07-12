@@ -37,7 +37,27 @@ docker build . --tag nhw
 docker run -d -p 9090:9090 -p 9091:22 -v D:/wamp64/www:/projects --name nhw0 nhw
 ```
 
-**IMPORTANT:** you have to share the drive in order to give the image access to it. You can do that in *Docker / Settings / Shared Drives*, then check the ones you wanna share and apply the changes.
+### IMPORTANT
+
+#### Build arguments
+There are two default values for the build:
+* **r** - The root's password. Defaults to `nuclide`.
+* **v** - Nuclide version to be installed in the VM. Defaults to `0.236.0`.
+
+Those can be changed at build time by using the `--build-arg` argument.
+
+```bash
+docker build . --build-arg p=my0wnP4ss --build-arg v=0.238.0
+```
+
+### Nuclide host and client versions MUST MATCH
+If they don't, Atom Nuclide will throw [this error when try to connect remotely](https://github.com/facebook/nuclide/issues/1035):
+> Version mismatch. Client at XXX while server at YYY
+
+To know which version you need, go to *Settings / Packages* and look for "Nuclide" and see the package version you have installed. That is the one you need to set in the `v` build argument.
+
+#### Share your drive/s
+You have to share the drive in order to give the image access to it. You can do that in *Docker / Settings / Shared Drives*, then check the ones you wanna share and apply the changes.
 
 #### How to run the Docker image with multiple source folders?
 In case you have many folders with your projects distributed in your local machines, you can use the `-v` several times and define a subfolder for each. For instance, I have my backend projects at **D:/wamp64/www** and my frontend projects at **D:/dev**, so I run:
